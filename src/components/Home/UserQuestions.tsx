@@ -46,7 +46,7 @@ const UserQuestions = ({ userQuestions }: Props) => {
   return (
     <>
       <View style={styles.sortWrapper}>
-        <ThemedText>Sort by: </ThemedText>
+        <ThemedText>Sort by:   </ThemedText>
         {renderSortButtons()}
       </View>
 

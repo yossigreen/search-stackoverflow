@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     width: SCREEN_WIDTH,
     flexDirection: 'row',
     justifyContent: 'center',
-    marginVertical: 20
+    marginVertical: 40
   },
   image: {
     width: 80,

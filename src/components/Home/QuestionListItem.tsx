@@ -18,7 +18,7 @@ const QuestionListItem = ({ question, onPress }: Props) => {
       <View style={[styles.listItemContainer, { borderBottomColor: color }]}>
         <View style={styles.textWrapper}>
           <ThemedText style={styles.title} numberOfLines={2}>{question?.title}</ThemedText>
-          <ThemedText numberOfLines={1}>{question?.tags.join()}</ThemedText>
+          <ThemedText numberOfLines={1}>{`Tags: ${question?.tags.join()}`}</ThemedText>
         </View>
 
         <ThemedText style={{ fontSize: 25 }}>{'>'}</ThemedText>
@@ -29,7 +29,7 @@ const QuestionListItem = ({ question, onPress }: Props) => {
 
 const styles = StyleSheet.create({
   listItemContainer: {
-    width: SCREEN_WIDTH,
+    width: SCREEN_WIDTH - 20,
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 10,

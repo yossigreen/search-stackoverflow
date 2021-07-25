@@ -14,32 +14,34 @@ const ThemedInput = (props: Props) => {
   const { color } = useTheme();
 
   const [value, setValue] = useState('');
+  const [minWidth, setMinWidth] = useState<number|undefined>(undefined);
 
   return (
     <TextInput
       {...props}
+      style={[styles.defaultStyles, style, { color, borderBottomColor: color, minWidth }]}
       value={value}
       onChangeText={setValue}
-      allowFontScaling={false}
       onSubmitEditing={() => {
         onSearchUser(value);
         setValue('');
       }}
       placeholder="Enter stackoverflow user ID"
       placeholderTextColor={color}
-      style={[styles.defaultStyles, style, { color, borderBottomColor: color }]}
+      allowFontScaling={false}
+      onLayout={({ nativeEvent: { layout: { width } } }) => !minWidth && setMinWidth(width)}
     />
   );
 };
 
 const styles = StyleSheet.create({
   defaultStyles: {
-    width: SCREEN_WIDTH * 0.75,
     fontSize: 14,
     height: 30,
     borderBottomWidth: 1,
-    marginVertical: 20,
-    padding: 0
+    marginTop: 20,
+    padding: 0,
+    textAlign: 'center'
   }
 });
 

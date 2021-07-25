@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <ThemedView style={styles.appContainer}>
       <ThemeToggle />
-      <ThemedText style={{ fontSize: 20 }}>Find StackOverflow Posts</ThemedText>
+      <ThemedText style={{ fontSize: 25 }}>Find StackOverflow Posts</ThemedText>
       <ThemedInput onSearchUser={onSearchUser} />
       <UserData />
       <QuestionPage />
