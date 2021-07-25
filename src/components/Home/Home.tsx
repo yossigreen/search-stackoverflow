@@ -5,7 +5,7 @@ import UserData from './UserData';
 import QuestionPage from '../QuestionPage/QuestionPage';
 import { ThemedView, ThemedText, ThemeToggle, ThemedInput } from '../Common';
 import { searchUser } from '../../store/actions/StackoverflowUserActions';
-import { PADDING_BOTTOM, PADDING_TOP, SCREEN_HEIGHT, SCREEN_WIDTH } from '../../constants';
+import { PADDING_BOTTOM, PADDING_TOP } from '../../constants';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -29,8 +29,7 @@ const Home = () => {
 
 const styles = StyleSheet.create({
   appContainer: {
-    width: SCREEN_WIDTH,
-    height: SCREEN_HEIGHT,
+    flex: 1,
     alignItems: 'center',
     paddingTop: PADDING_TOP,
     paddingBottom: PADDING_BOTTOM
